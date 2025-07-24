@@ -3,6 +3,6 @@ resource "aws_instance" "instance" {
   key_name = var.keytera
   ami = var.amitera
   tags = {
-    name=var.nametera
+    Name=var.nametera
   }
 }
