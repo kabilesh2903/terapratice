@@ -3,6 +3,6 @@ resource "aws_instance" "instance" {
   key_name = var.keytera
   ami = var.amitera
   tags = {
-    Name="Git_tera"
+    name=var.nametera
   }
 }
