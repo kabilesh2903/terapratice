@@ -22,7 +22,7 @@ module "vpc" {
 # Create EKS Cluster using AWS EKS Module
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "1.31"
+  version = "21.3.2"
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
