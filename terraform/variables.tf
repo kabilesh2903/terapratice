@@ -1,28 +1,44 @@
-variable "aws_region" {
-  description = "AWS region"
+variable "clustername" {}
+variable "env" {}
+variable "clustersg" {
+  description = "this is the name of securitygroup"
   type        = string
-  default     = "us-east-1"
 }
 
-variable "cluster_name" {
-  description = "EKS Cluster name"
+variable "vpcname" {
   type        = string
-  default     = "versioned-eks-cluster"
 }
 
-variable "cluster_version" {
-  description = "Kubernetes version for the EKS cluster"
+variable "pubsub01" {
   type        = string
-  default     = "1.27"
+}
+variable "pubsub02" {
+  type        = string
+}
+#variable "pri01" {
+#  type        = string
+#}
+#variable "pri02" {
+#  type        = string
+#}
+
+variable "block1" {
+  type        = string
+}
+variable "block2" {
+  type        = string
+}
+variable "block3" {
+  type        = string
+}
+variable "block4" {
+  type        = string
 }
 
-variable "node_instance_type" {
-  description = "EC2 instance type for EKS worker nodes"
-  type        = string
-  default     = "t3.medium"
-}
 
-variable "desired_capacity" {
-  type    = number
-  default = 2
+variable "block5" {
+  type        = string
+}
+variable "block6" {
+  type        = string
 }

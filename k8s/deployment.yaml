@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: hello-world-container
-          image: <your-docker-image>:<tag>   # e.g. yourusername/hello-world:latest
+          image: sudarshanlnx/2022sundayweb:v1   # e.g. yourusername/hello-world:latest
           ports:
             - containerPort: 80                # or 3000 for Node.js app
           readinessProbe:
@@ -32,6 +32,7 @@ spec:
             initialDelaySeconds: 15
             periodSeconds: 20
 
+---
 
 apiVersion: v1
 kind: Service
