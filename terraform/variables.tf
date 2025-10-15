@@ -33,6 +33,10 @@ variable "block3" {
 }
 variable "block4" {
   type        = string
+<<<<<<< HEAD
+=======
+  default     = "1.31"
+>>>>>>> 57eb1e1890413234d37fc5ab60043ef4acc16846
 }
 
 
