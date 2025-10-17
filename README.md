@@ -8,6 +8,8 @@ The pipeline provisions infrastructure, builds and pushes Docker images, and dep
 
 ## 🌐 Project Architecture
 
+```
+
 GitHub Repo
 │
 │
@@ -28,7 +30,7 @@ hello-world NGINX Deployment
 ▼
 LoadBalancer Service (External Access)
 
-
+```
 - **Terraform:** Provision AWS resources (VPC, subnets, IAM roles, EKS cluster, node groups)  
 - **Docker:** Containerize the NGINX web app  
 - **Kubernetes:** Deploy containers with `Deployment` and `Service` manifests  
@@ -50,6 +52,8 @@ LoadBalancer Service (External Access)
 
 ## 📂 Project Structure
 
+```
+
 ├── Dockerfile
 ├── index.html
 ├── Jenkinsfile
@@ -62,7 +66,7 @@ LoadBalancer Service (External Access)
 │ ├── terraform.tfvars
 │ └── vpc.tf
 
-
+```
 ---
 
 ## 🏗️ Terraform Infrastructure
@@ -72,10 +76,6 @@ LoadBalancer Service (External Access)
   - Two public subnets in separate AZs for HA  
   - Internet Gateway and Route Tables for external access  
   - Security Group allowing SSH (22) & HTTP (80)  
-
-- **IAM Roles:**  
-  - `eksclusterrole` → EKS cluster  
-  - `node-group-role` → worker nodes  
 
 - **EKS Cluster:**  
   - Kubernetes version `1.33`  
@@ -128,6 +128,7 @@ Type: LoadBalancer
 
 Maps external port 80 to container port 80
 
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -173,7 +174,7 @@ spec:
     port: 80
     targetPort: 80
 
-
+```
 
 
 ## 🔧 Jenkins Pipeline Overview
