@@ -29,10 +29,10 @@ hello-world NGINX Deployment
 LoadBalancer Service (External Access)
 
 
-- **Terraform:** Provision AWS resources (VPC, subnets, IAM roles, EKS cluster, node groups)  
-- **Docker:** Containerize the NGINX web app  
-- **Kubernetes:** Deploy containers with `Deployment` and `Service` manifests  
-- **Jenkins:** Automate CI/CD workflow with approval step  
+- **Terraform:** Provision AWS resources (VPC, subnets, IAM roles, EKS cluster, node groups)
+- **Docker:** Containerize the NGINX web app
+- **Kubernetes:** Deploy containers with `Deployment` and `Service` manifests
+- **Jenkins:** Automate CI/CD workflow with approval step
 
 ---
 
@@ -67,20 +67,22 @@ LoadBalancer Service (External Access)
 
 ## 🏗️ Terraform Infrastructure
 
-- **VPC & Networking:**  
-  - VPC with CIDR `10.0.0.0/16`  
-  - Two public subnets in separate AZs for HA  
-  - Internet Gateway and Route Tables for external access  
-  - Security Group allowing SSH (22) & HTTP (80)  
+- **VPC & Networking:**
+  - VPC with CIDR `10.0.0.0/16`
+  - Two public subnets in separate AZs for HA
+  - Internet Gateway and Route Tables for external access
+  - Security Group allowing SSH (22) & HTTP (80)
 
-- **IAM Roles:**  
-  - `eksclusterrole` → EKS cluster  
-  - `node-group-role` → worker nodes  
+- **IAM Roles:**
+  - `eksclusterrole` → EKS cluster
+  - `node-group-role` → worker nodes
 
-- **EKS Cluster:**  
-  - Kubernetes version `1.33`  
-  - Managed node group (t3.micro)  
-  - Labels for easy identification  
+- **EKS Cluster:**
+  - Kubernetes version `1.33`
+  - Managed node group (t3.micro)
+  - Labels for easy identification
+
+---
 
 ### Terraform Variables Example Dockerfile
 
@@ -98,7 +100,9 @@ block4      = "10.0.3.0/24"
 block5      = "10.0.4.0/24"
 block6      = "10.0.5.0/24"
 
+```
 ---
+
 
 ## **🐳 Dockerfile**
 
