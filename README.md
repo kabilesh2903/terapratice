@@ -107,12 +107,12 @@ Base image: nginx:1.25-alpine
 Copies index.html into container
 
 Exposes port 80
-
+```
 FROM nginx:1.25-alpine
 RUN rm -rf /usr/share/nginx/html/*
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
-
+```
 
 ## ☸️ Kubernetes Deployment (k8s/deployment.yaml)
 
